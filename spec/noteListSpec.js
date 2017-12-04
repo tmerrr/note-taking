@@ -1,15 +1,15 @@
 function testNoteListModelHasAnArrayForNotes() {
   var noteList = new NoteList();
-  assert.isSameObjectType(noteList.allNotes, []);
+  assert.isObjectType(noteList.allNotes, Array);
 };
 
 testNoteListModelHasAnArrayForNotes();
 
-function testPushingToAllNotes() {
+function testNoteHasBeenPushed() {
   var noteList = new NoteList();
-  var note = 'note double';
-  noteList.addNote(note);
-  assert.arrayContains(noteList.allNotes, note);
+  noteList.addNote("Hello World!");
+  assert.isObjectType(noteList.allNotes[0], Note);
+  assert.isEqualTo(noteList.allNotes[0].text, "Hello World!")
 }
 
-testPushingToAllNotes();
+testNoteHasBeenPushed();

@@ -3,7 +3,8 @@ function NoteList () {
 }
 
 NoteList.prototype = {
-  addNote: function(note) {
+  addNote: function(string) {
+    note = new Note(string);
     this.allNotes.push(note);
   }
 }

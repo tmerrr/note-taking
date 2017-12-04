@@ -1,3 +1,3 @@
-function Notes(string) {
+function Note(string) {
   this.text = string
 }

@@ -7,11 +7,11 @@ var assert = {
     }
   },
 
-  isSameObjectType: function(obj1, obj2) {
-    if (obj1.constructor !== obj2.constructor) {
-      throw new Error(`${obj1} is not the same object type as ${obj2}`)
+  isObjectType: function(obj, objType) {
+    if (obj.constructor !== objType) {
+      throw new Error(`${obj.constructor.name} is not a type of ${objType.name}`)
     } else {
-      console.log(`${obj1.constructor} is the same object type as ${obj2.constructor}`)
+      console.log(`${obj.constructor.name} is a type of ${objType.name}`)
     }
   },
 
@@ -23,3 +23,19 @@ var assert = {
     }
   }
 }
+
+// arrayContainsObjectType: function(array, object) {
+//   if (array.includes(object.constructor)) {
+//     console.log(`Array contain ${object.constructor}`)
+//   } else {
+//     throw new Error(`Array do not contain ${object.constructor}`)
+//   }
+// }
+
+// arrayContainsObjectType: function(array, object) {
+//   if (array.last.constructor === object.constructor) {
+//     console.log(`Array contain ${object.constructor}`)
+//   } else {
+//     throw new Error(`Array do not contain ${object.constructor}`)
+//   }
+// }
