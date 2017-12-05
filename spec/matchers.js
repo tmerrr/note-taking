@@ -7,11 +7,11 @@ var assert = {
     }
   },
 
-  isObjectType: function(obj, objType) {
-    if (obj.constructor !== objType) {
-      throw new Error(`${obj.constructor.name} is not a type of ${objType.name}`)
+  isObjectType: function(object, objectType) {
+    if (object instanceof objectType) {
+      console.log(`${typeof(object)} is a type of ${objectType.name}`)
     } else {
-      console.log(`${obj.constructor.name} is a type of ${objType.name}`)
+      throw new Error(`${typeof(object)} is not a type of ${objectType.name}`)
     }
   },
 

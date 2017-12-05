@@ -10,7 +10,7 @@ function testNoteHasBeenPushed() {
   noteList.addNote("Hello World!");
   console.log(noteList.allNotes[0])
   assert.isObjectType(noteList.allNotes[0], Note);
-  assert.isEqualTo(noteList.allNotes[0].seeText, "Hello World!")
+  assert.isEqualTo(noteList.allNotes[0].seeText(), "Hello World!")
 }
 
 testNoteHasBeenPushed();
